@@ -5,7 +5,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
     vertical-align: baseline;
 }
 
-article, aside, code, details, quote, footer, header, hgroup, menu, nav, section {
+article, aside, code, details, blockquote, footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
@@ -30,7 +30,6 @@ ol, ul {
 
 html {
     font-family: "Droid serif", georgia, times, serif;
-    overflow-y: scroll;
 }
 
 body {
@@ -43,42 +42,50 @@ header, nav, article h1 {
     color: white;
 }
 
+footer, .tags, .bottomlinks {
+    font-family: "trebuchet MS", tahoma, helvetica, sans-serif;
+}
+
+header, nav, footer {
+    width: 100%;
+}
+
 header {
-    background: #94bfd5 url(images/tile.png);
-    height: 120px;
-    border-top: 1px solid #fff;
+    background: #94bfd5;
+    height: 100px;
+    border-top: 1px solid white;
 }
 
 header>hgroup, nav>ul {
-    width: 940px;
+    width: 100%;
     margin: 0 auto;
     clear: both;
 }
 
-header>hgroup {
-    background: url(images/loops.png) 100% 0 no-repeat;
-    height: 160px;
-}
-
 #logo {
     float: left;
-    margin: 50px 0 0 50px;
+    margin: 0 0 0 50px;
+    line-height: 75px;
+    padding-top: 25px;
 }
 
 header>hgroup>h2 {
     float: right;
     font-weight: normal;
-    margin: 50px 0;
-    line-height: 40px;
+    margin: 0 5% 0 0;
+    line-height: 80px;
+    padding-top: 20px;
     font-size: 28px;
 }
 
 nav {
     background: black;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
     line-height: 32px;
-    -webkit-box-shadow: 0 0 10px rgba(64, 64, 64, 0.5)
+    -moz-shadow: 0 10px 10px rgba(64, 64, 64, 0.5);
+    -webkit-box-shadow: 0 10px 10px rgba(64, 64, 64, 0.5);
+    box-shadow: 0 10px 10px rgba(64, 64, 64, 0.5);
 }
 
 nav ul {
@@ -101,53 +108,48 @@ nav ul li:last-child:after {
     content: ''
 }
 
-nav ul li a {
+nav a {
     color: #fff;
     margin: 0 1em;
     text-decoration: none;
 }
 
-nav ul li a.current, nav ul li a:hover {
+nav a.current, nav a:hover {
     text-decoration: underline;
 }
 
-nav ul li a.active {
-    color: #fa711c;
-}
-
-.article, .date {
-    background: #f0f0f0;
-    -webkit-box-shadow: 0 0 20px rgba(64, 64, 64, 0.125);
-    text-shadow: 0 1px 1px #fff;
-    border: 1px solid white;
+article {
+    background: #FFFFD1;
+    margin: 20px 2% 20px 15%;
+    padding: 2%;
+    width: 80%;
+    min-height: 200px;
+    border: 2px solid white;
     -moz-border-radius: 10px;
     border-radius: 10px;
+    text-shadow: 0 1px 1px #fff;
 }
 
-article {
-    margin: 20px 0 20px 100px;
-    padding: 20px;
-    width: 840px;
-    min-height: 200px;
+article.quote {
+    min-height: 100px;
 }
 
-article aside {
-    margin: -20px 0 0 -110px;
-    clear: both;
-    display: block;
+article aside.droplet {
+    width: 60px;
+    height: 60px;
     float: left;
-    width: 75px;
-    height: 75px;
     text-align: center;
+    background: white;
+    margin: -10px 10px 0 -160px;
+    padding: 30px;
+    -moz-border-radius: 60px 2px 60px 60px;
+    border-radius: 60px 2px 60px 60px;
+    -moz-opacity: 0.7;
+    opacity: 0.7;
 }
 
 article h1, article h2, article h3 {
     padding: 0 0 0.5em;
-}
-
-aside h1, aside h2, aside h3 {
-    text-align: center;
-    padding: 1em 0 0.2em;
 }
 
 article ul, article p {
@@ -155,41 +157,132 @@ article ul, article p {
     font-size: 18px;
 }
 
-article a, footer a {
+ul.tags, ul.bottomlinks {
+    text-align: right;
+    margin: 0;
+    padding: 0.2em 10px;
+}
+
+ul.tags {
+    float: right;
+    width: 50%;
+    font-size: 14px;
+}
+
+ul.bottomlinks {
+    clear: both;
+    display: block;
+    width: 100%;
+    margin: 10px;
+    font-size: 20px;
+}
+
+ul.tags li {
+    display: inline;
+    background: url(http://static.tumblr.com/rfjqlp2/XrPlm2s8l/tag_icon.png) no-repeat;
+    padding-left: 18px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+ul.bottomlinks li.pen {
+    display: inline;
+    background: url(images/pen_icon.png) no-repeat;
+    padding-left: 30px;
+    line-height: 28px;
+}
+
+ul.tags li a, ul.bottomlinks li a {
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 3px;
+
+    font-weight: normal;
+    text-shadow: none;
+    text-decoration: none;
+    color: black;
+}
+
+ul.tags li a:hover, ul.bottomlinks li a:hover {
+    background: white;
+}
+
+article.quote blockquote {
+    font-family: Lobster, "trebuchet MS", tahoma, helvetica, sans-serif;
+    font-size: 24px;
+    padding: 20px 80px 20px 80px;
+    margin: -10px 0 20px 0;
+}
+
+blockquote .title {
+    display: none;
+}
+
+article.quote .openingcurl {
+    display: block;
+    float: left;
+    height: 45px;
+    margin: -55px 0 0 -90px;
+    font-size: 700%;
+    color: #BE490E;
+}
+
+article.quote .closingcurl {
+    display: block;
+    float: right;
+    height: 25px;
+    margin: -35px -85px 0 0;
+    font-size: 700%;
+    color: #BE490E;
+}
+
+article.quote cite {
+    margin-left: 80px;
+    font-size: 20px;
+}
+
+article a, footer a, .warning {
     color: #BE490E;
     font-weight: bold;
 }
 
-footer {
-    font-family: "trebuchet MS", tahoma, helvetica, sans-serif;
-    clear: both;
-    background: #29292a;
-    height: 120px;
-    font-size: 12px;
-    color: white;
-    border-top: 1px solid #fff;
-    -webkit-box-shadow: 0 0 10px rgba(64, 64, 64, 0.5)
+.warning {
+    font-family: Courier, monospace;
+    font-size: 64px;
 }
 
-footer div {
+div.clear {
+    clear: both;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+footer {
+    clear: both;
+    overflow: auto;
+    background: #29292a;
+    font-size: 12px;
+    color: white;
+    border-top: 1px solid white;
+    -moz-shadow: 0 10px 10px rgba(64, 64, 64, 0.5);
+    -webkit-box-shadow: 0 10px 10px rgba(64, 64, 64, 0.5);
+    box-shadow: 0 10px 10px rgba(64, 64, 64, 0.5);
+}
+
+footer>div {
     height: 100px;
     padding: 10px;
 }
 
 #leftfooter {
-    width: 400px;
+    width: 40%;
     float: left;
     text-align: left;
 }
 
-#rightfooter {
-    width: 200px;
-    float: right;
-    text-align: right;
-}
-
 #midfooter {
-    width: 200px;
     float: left;
     font-size: 16px;
     height: 50px;
@@ -197,12 +290,18 @@ footer div {
     background: url(http://farm4.static.flickr.com/3358/5764545855_97b89127a9_t.jpg) left 60% no-repeat;
 }
 
+#rightfooter {
+    width: 20%;
+    float: right;
+    text-align: right;
+}
+
 /*JavaScript Highlighting style for hijs.js */
 code, .example {
     font-family: 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Courier, monospace !important;
-    font-size: 18px;
+    font-size: 16px;
     border: 1px red dotted;
-    background: white;
+    background: #fff;
     padding: 1em;
     overflow-x: auto;
     overflow-y: hidden;
@@ -230,4 +329,5 @@ code .number {
     color: #E9967A;
     font-weight: bold;
 }
+
 
