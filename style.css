@@ -1,0 +1,233 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, code, em, img, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, footer, header, hgroup, menu, nav, section, summary, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+article, aside, code, details, quote, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style-position: inside;
+}
+
+/************/
+@font-face {
+    font-family: 'Droid Serif';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Droid Serif'), local('DroidSerif'), url('http://themes.googleusercontent.com/font?kit=0AKsP294HTD-nvJgucYTaIbN6UDyHWBl620a-IRfuBk') format('woff');
+}
+
+@font-face {
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Lobster'), url('http://themes.googleusercontent.com/font?kit=MWVf-Rwh4GLQVBEwbyI61Q') format('woff');
+}
+
+html {
+    font-family: "Droid serif", georgia, times, serif;
+    overflow-y: scroll;
+}
+
+body {
+    border-top: 5px solid #fa711c;
+    background: #e7e7e7 url(http://colourlovers.com.s3.amazonaws.com/images/patterns/1354/1354072.png) repeat;
+}
+
+header, nav, article h1 {
+    font-family: Lobster, "trebuchet MS", tahoma, helvetica, sans-serif;
+    color: white;
+}
+
+header {
+    background: #94bfd5 url(images/tile.png);
+    height: 120px;
+    border-top: 1px solid #fff;
+}
+
+header>hgroup, nav>ul {
+    width: 940px;
+    margin: 0 auto;
+    clear: both;
+}
+
+header>hgroup {
+    background: url(images/loops.png) 100% 0 no-repeat;
+    height: 160px;
+}
+
+#logo {
+    float: left;
+    margin: 50px 0 0 50px;
+}
+
+header>hgroup>h2 {
+    float: right;
+    font-weight: normal;
+    margin: 50px 0;
+    line-height: 40px;
+    font-size: 28px;
+}
+
+nav {
+    background: black;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    line-height: 32px;
+    -webkit-box-shadow: 0 0 10px rgba(64, 64, 64, 0.5)
+}
+
+nav ul {
+    text-align: center;
+    padding: 5px 0;
+}
+
+nav ul li {
+    display: inline;
+    list-style: none;
+    color: #94bfd5;
+    font-size: 20px;
+}
+
+nav ul li:after {
+    content: '//'
+}
+
+nav ul li:last-child:after {
+    content: ''
+}
+
+nav ul li a {
+    color: #fff;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+nav ul li a.current, nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li a.active {
+    color: #fa711c;
+}
+
+.article, .date {
+    background: #f0f0f0;
+    -webkit-box-shadow: 0 0 20px rgba(64, 64, 64, 0.125);
+    text-shadow: 0 1px 1px #fff;
+    border: 1px solid white;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+article {
+    margin: 20px 0 20px 100px;
+    padding: 20px;
+    width: 840px;
+    min-height: 200px;
+}
+
+article aside {
+    margin: -20px 0 0 -110px;
+    clear: both;
+    display: block;
+    float: left;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+}
+
+article h1, article h2, article h3 {
+    padding: 0 0 0.5em;
+}
+
+aside h1, aside h2, aside h3 {
+    text-align: center;
+    padding: 1em 0 0.2em;
+}
+
+article ul, article p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+article a, footer a {
+    color: #BE490E;
+    font-weight: bold;
+}
+
+footer {
+    font-family: "trebuchet MS", tahoma, helvetica, sans-serif;
+    clear: both;
+    background: #29292a;
+    height: 120px;
+    font-size: 12px;
+    color: white;
+    border-top: 1px solid #fff;
+    -webkit-box-shadow: 0 0 10px rgba(64, 64, 64, 0.5)
+}
+
+footer div {
+    height: 100px;
+    padding: 10px;
+}
+
+#leftfooter {
+    width: 400px;
+    float: left;
+    text-align: left;
+}
+
+#rightfooter {
+    width: 200px;
+    float: right;
+    text-align: right;
+}
+
+#midfooter {
+    width: 200px;
+    float: left;
+    font-size: 16px;
+    height: 50px;
+    padding: 60px 0 10px 100px;
+    background: url(http://farm4.static.flickr.com/3358/5764545855_97b89127a9_t.jpg) left 60% no-repeat;
+}
+
+/*JavaScript Highlighting style for hijs.js */
+code, .example {
+    font-family: 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Courier, monospace !important;
+    font-size: 18px;
+    border: 1px red dotted;
+    background: white;
+    padding: 1em;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+code .comment {
+    color: #3CB371;
+}
+
+code .keyword {
+    color: #1E90FF;
+    font-weight: bold;
+}
+
+code .class {
+    font-style: italic;
+}
+
+code .string {
+    color: #CD5C5C;
+    font-weight: bold;
+}
+
+code .number {
+    color: #E9967A;
+    font-weight: bold;
+}
+

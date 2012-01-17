@@ -1,0 +1,28 @@
+
+J'en entends déjà s'exclamer : Diable, mais que va-t-on faire avec ça ?
+A vrai dire, je ne sais pas non plus ce qui me prend de commencer cette série d'article techniques avec un sujet a priori aussi peu sexy que celui ci, mais attendez, attendez.. Il y a peut-être des surprises agréables à l'arrivée, et peut-être même des Bon sang, mais c'est bien sûr !
+
+Les automates à états finis (FSM en abrégés pour 'Finite State Machine') disposent déjà d'une longue biographie d'articles et d'ouvrages dédiés, sur le net, comme dans nos vieux supports de cours. 
+Néanmoins, je n'ai pas envie d'entrer dans le détail de leur classification (chose assurément périlleuse aujourd'hui, vu mon éloignement) et de leur utilité formelle et théorique.
+La question est plutôt : mais aujourd'hui, à l'heure du web 2.0, des applications Ajax, des réseaux P2P ou de l'Internet des Objets, à quoi peut donc servir dans la boite à outils d'un développeur cette drôle de machine finie ?
+Apparemment, ce type de structure a déjà connu un regain de popularité dans les jeux vidéos, plus précisémment dans la programmation de l'Intelligence Artificielle (AI) des nombreux bots, aliens ou zombis qui vous tombent dessus au détour d'un couloir mal éclairé, ou depuis une plateforme branlante.
+On a trouvé mieux depuis, mais là n'est pas la question, je cherche justement à apporter un regard neuf, une approche fraiche et festive à l'usage de ce type de structure. Et là justement, JavaScript, et son aspect dynamique vont je l'espère nous permettre d'appréhender différemment la programmation de ces droles de bestioles.
+
+L'expérience qui m'a remis sur la voie de ces objets préhistorique est celle du développement d'une page complexe en JavaScript, avec de multiples widgets et monstres cachés, surgissant de la page comme autant de diables de leur boite.
+La programmation évènementielle en JavaScript est certe facilitée par l'utilisation des librairies adéquates (jQuery, Prototype) mais à un moment, à force d'abuser des effets et des animations révélant notre palette d'outils, on en vient à être un peu débordé par le monstre qu'on a créé : l'ajout ou la suppression d'éléments dynamiques, les fonctionalités d'Edit in Place, les wizards.. tous ces objets registrant et déregistrant leurs évènements selon leur bon vouloir.
+C'est la lecture d'un article édifiant d'un ingénieur d'IBM (certainement un gars de la vieille école : http://www.ibm.com/developerworks/views/web/libraryview.jsp?search_by=Finite+state+machines+in+JavaScript) qui m'a remis dans le droit chemin : oui, pour espérer pouvoir régner un jour sur le chaos, il faut se donner des règles, et les plus contraignantes sont certes les meilleures. 
+Donc pour conserver le contrôle et l'intégrité de ma page, il a falu préalablement que j'en identifie tous les états valides, et que j'identifie ensuite la liste des transitions (la liste des actions autorisées permettant à l'utilisateur de passer d'un état à l'autre). 
+C'est la seule manière, par des transitions clairement identifiées, de passer d'un état stable à un autre, et d'empécher des transitions à des états instables et forcément indésirables dans notre workflow.
+
+Donc voilà..
+La série d'articles de cet ingénieur d'IBM (que je vous recommande) était passionnante. Il convenait néanmoins d'essayer de proposer une implémentation générique et plus avancée de nos automates, et challenge supplémentaire.. de proposer une librairie utilisable côté client (dans le navigateur) ou dans le serveur (avec Node.JS).
+
+Le style de programation de notre auteur ayant un peu vieilli, je me suis dit qu'il serait plus amusant de programmer dynamiquement nos automates, en utilisant le style chainé bien connu des utilisateur de jQuery et Prototype..
+Ce qui donnerait à peu près ceci :
+
+<code>
+</code>
+
+La suite de l'article entrera plus en détail dans le code pour en expliquer différents aspects et proposera d'autres exemples d'utilisation.
+
+
