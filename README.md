@@ -1,7 +1,7 @@
 
 #Eidolon Labs Blog
 ##Content
-Tumblr Template, resources files : javascript, CSS, images for [Eidolon Labs blog](http://eidolon-labs.blog).
+Tumblr Template, resources files : javascript, CSS, images for [Eidolon Labs blog](http://eidolon-labs.com).
 The most important extensions are our jQuery plugins to handle and automatically execute the code examples presents in the page.
 
 ##Deployment
