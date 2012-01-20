@@ -22,9 +22,10 @@
 </head>
 <body>
 
+<div id="container">
 <header>
     <hgroup>
-        <h1><img id="logo" src="{image:Logo}" alt="Eidolon Labs"/></h1>
+        <h1><img id="logo" src="http://i52.tinypic.com/11t50dk.png" alt="Eidolon Labs"/></h1>
 
         <h2>To Infinity... and Beyond!</h2>
     </hgroup>
@@ -39,7 +40,7 @@
     </ul>
 </nav>
 
-
+<div id="main">
 <article class="article">
     <aside class="droplet">
         <h2>?</h2>
@@ -58,7 +59,7 @@
     
     <p>
         Voici un exemple de prestations réalisées récemment :
-        <ul>
+        <ul id="realisations">
             <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea01.png" alt="Carte de visite 'Samia Zouari'"></li>
             <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea02.png" alt="Carte de visite 'Samia Zouari' (verso)"></li>
             <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea03.png" alt="Recherche de Logo"></li>
@@ -97,7 +98,8 @@
     </ul>
 
 </article>
-
+</div>
+</div>
 
 <footer>
     <div id="leftfooter"><br/><br/><br/>
@@ -106,7 +108,7 @@
     </div>
 
     <div id="midfooter"><span id="copyright">&copy;&nbsp;2011</span><br/>
-        <img src="{image:Logo}" width="136px" height="20px" alt="Eidolon Labs"/>
+        <img src="http://i52.tinypic.com/11t50dk.png" width="136px" height="20px" alt="Eidolon Labs"/>
     </div>
 
     <div id="rightfooter"><br/><br/><br/>Powered by <a href="http://www.tumblr.com">Tumblr</a><br/>Syntax Highlighting
@@ -114,6 +116,23 @@
     </div>
     <div class="clear"></div>
 </footer>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script src="http://foundation.zurb.com/javascripts/jquery.orbit-1.3.0.js"></script>
+<script src="http://zipang.github.com/EidolonLabsBlog/js/eidolon-blog.js"></script>
+
+<script>
+    // Start the slideshow
+    $("#realisations").infiniteCarousel({
+        displayThumbnails:false,
+        displayProgressBar:false,
+        showControls:false,
+        textholderHeight:.10,
+        textholderOpacity:1,
+        padding: "20px 20px 55px 20px"
+    });
+</script>
 
 </body>
 </html>
