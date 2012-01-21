@@ -12,9 +12,29 @@
     <link rel="icon" href="{Favicon}"/>
 
     <link rel="stylesheet" type="text/css" href="http://zipang.github.com/EidolonLabsBlog/style.css"/>
-
+    <link rel="stylesheet" type="text/css" href="flexslider.css"/>
     <!-- Here, we'll force Tumblr params into the stylesheet -->
-    <style></style>
+    <style>
+        #realisations {
+            background: black;
+            border: 2em solid white;
+            border-bottom: 5em solid white;
+            width: 800px;
+            height: 600px;
+        }
+        #realisations li {
+            display:table-cell;
+            vertical-align: middle;
+        }
+        #realisations img {
+            border: 1px solid black;
+        }
+        #realisations p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+    </style>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,7 +71,6 @@
     <p>
         Eidolon Labs est votre porte d'entrée dans une micro-galaxie d'ingénieurs freelance, auto-entrepreneurs ou
         indépendants, réunis autour d'un même projet de service.<br/>
-        Christophe Desguez Miguel Bocquier.<br/>
         (...)
     </p>
 
@@ -59,15 +78,17 @@
     
     <p>
         Voici un exemple de prestations réalisées récemment :
-        <ul id="realisations">
-            <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea01.png" alt="Carte de visite 'Samia Zouari'"></li>
-            <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea02.png" alt="Carte de visite 'Samia Zouari' (verso)"></li>
-            <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea03.png" alt="Recherche de Logo"></li>
-            <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea04.png" alt="Site www.mayukoyui.com : Photos et réalisation"></li>
-            <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea05.png" alt="Carton d'invitation : Photo et réalisation"></li>
-            <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea06.png" alt="Carte de voeux 'Mayuko Yui' : Photo et réalisation"></li>
+        <div id="realisations" class="flexslider">
+        <ul class="slides">
+            <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea01.png" /><p class="flex-caption">Carte de visite 'Samia Zouari'</p></li>
+            <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea02.png" /><p class="flex-caption">Carte de visite 'Samia Zouari' (verso)</p></li>
+            <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea03.png" /><p class="flex-caption">Recherche de Logo</p></li>
+            <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea04.png" /><p class="flex-caption">Site www.mayukoyui.com : Photos et réalisation</p></li>
+            <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea05.png" /><p class="flex-caption">Carton d'invitation : Photo et réalisation</p></li>
+            <li><img src="http://zipang.github.com/EidolonLabsBlog/images/captures/rea06.png" /><p class="flex-caption">Carte de voeux 'Mayuko Yui' : Photo et réalisation</p></li>
 
         </ul>
+        </div>
     </p>
     
     <h2>Prestations proposées</h2>
@@ -108,7 +129,7 @@
     </div>
 
     <div id="midfooter"><span id="copyright">&copy;&nbsp;2011</span><br/>
-        <img src="http://i52.tinypic.com/11t50dk.png" width="136px" height="20px" alt="Eidolon Labs"/>
+        <img src="http://i52.tinypic.com/11t50dk.png" width="136px" height="20px" />
     </div>
 
     <div id="rightfooter"><br/><br/><br/>Powered by <a href="http://www.tumblr.com">Tumblr</a><br/>Syntax Highlighting
@@ -119,18 +140,14 @@
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-<script src="http://foundation.zurb.com/javascripts/jquery.orbit-1.3.0.js"></script>
-<script src="http://zipang.github.com/EidolonLabsBlog/js/eidolon-blog.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+
 
 <script>
     // Start the slideshow
-    $("#realisations").infiniteCarousel({
-        displayThumbnails:false,
-        displayProgressBar:false,
-        showControls:false,
-        textholderHeight:.10,
-        textholderOpacity:1,
-        padding: "20px 20px 55px 20px"
+    $("#realisations").flexslider({
+        animation: "slide",
+        directionNav: false
     });
 </script>
 
