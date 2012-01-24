@@ -1,0 +1,28 @@
+
+html, body {
+    font-size: 13px;
+}
+
+#logo {
+    margin: 0.5em auto;
+    line-height: 75px;
+}
+
+header>hgroup>h2 {
+    float: right;
+    font-weight: normal;
+    margin: 0.5em 1em 0.2em 0;
+    font-size: 1.5em;
+}
+
+#container {
+    width: 100%;
+    margin: 1em 0;
+}
+
+article aside.droplet {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    margin: 0.2em;
+}
