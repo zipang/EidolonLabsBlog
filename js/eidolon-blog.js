@@ -29,9 +29,9 @@ $(function whenLoaded() {
     if ($.fn.flipflap) $(".droplet:empty").addClass("warning").flipflap("{Arrrghh#?!*%!$Xx}", 100);
 
     // Change the current underlined item in the navigation bar according to the url
-    var locationParts = window.location.split('/'); // extract
-    if (locationParts.length < 2) return; // no extra subpath
-    var pageName = locationParts[2];
+    var locationParts = window.location.pathName.split("/"); // split path
+    if (!locationParts.length) return; // we are at the root
+    var pageName = locationParts[0];
     $("#navigation a").removeClass("current");
     $("#navigation a[href=/" + pageName + "]").addClass("current");
 });
