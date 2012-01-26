@@ -34,12 +34,5 @@ dwsync.xml
 .hg
 .svn
 .CVS
-intermediate
-publish
 .idea
-marketing/fonts
 
-# build script local files
-build/buildinfo.properties
-build/config/buildinfo.properties
-marketing/files/foundation-download.zip
