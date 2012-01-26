@@ -8,363 +8,41 @@
 
     <link rel="icon" href="{Favicon}"/>
 
-    <style type="text/css">
-    @font-face {
-        font-family: 'Droid Serif';
-        font-style: normal;
-        font-weight: normal;
-        src: local('Droid Serif'), local('DroidSerif'), url('http://themes.googleusercontent.com/font?kit=0AKsP294HTD-nvJgucYTaIbN6UDyHWBl620a-IRfuBk') format('woff');
-    }
+    <link rel="stylesheet" type="text/css" href="http://zipang.github.com/EidolonLabsBlog/style.css"/>
+    <link rel="stylesheet" type="text/css" href="http://zipang.github.com/EidolonLabsBlog/mobile.css" media="handheld" />
 
-    @font-face {
-        font-family: 'Lobster';
-        font-style: normal;
-        font-weight: normal;
-        src: local('Lobster'), url('http://themes.googleusercontent.com/font?kit=MWVf-Rwh4GLQVBEwbyI61Q') format('woff');
-    }
-
-    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, code, em, img, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, footer, header, hgroup, menu, nav, section, summary, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        vertical-align: baseline;
-    }
-
-    article, aside, code, cite, blockquote, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-        display: block;
-    }
-
-    ol, ul {
-        list-style-position: inside;
-    }
-
-        /************/
-
-    html {
-        font-family: "Droid serif", georgia, times, serif;
-    }
-
-    body {
-        border-top: 5px solid #fa711c;
-        background: #e7e7e7 url(http://colourlovers.com.s3.amazonaws.com/images/patterns/1354/1354072.png) repeat;
-        width: 100%;
-    }
-
-    header, nav, article h1 {
-        font-family: Lobster, "trebuchet MS", tahoma, helvetica, sans-serif;
-        color: #fff;
-    }
-
-    footer, .tags, .bottomlinks {
-        font-family: "trebuchet MS", tahoma, helvetica, sans-serif;
-    }
-
-    header, nav, footer {
-        width: 100%;
-    }
-
-    header {
-        background: #94bfd5;
-        height: 100px;
-        border-top: 1px solid #fff;
-    }
-
-    header>hgroup, nav>ul {
-        width: 100%;
-        margin: 0 auto;
-        clear: both;
-    }
-
-    #logo {
-        float: left;
-        margin: 0 0 0 50px;
-        line-height: 75px;
-        padding-top: 25px;
-    }
-
-    header>hgroup>h2 {
-        float: right;
-        font-weight: normal;
-        margin: 0 5% 0 0;
-        line-height: 80px;
-        padding-top: 20px;
-        font-size: 28px;
-    }
-
-    nav {
-        background: #000;
-        border-top: 1px solid #fff;
-        border-bottom: 1px solid #fff;
-        line-height: 32px;
-        -moz-shadow: 0 10px 10px rgba(64, 64, 64, 0.5);
-        -webkit-box-shadow: 0 10px 10px rgba(64, 64, 64, 0.5);
-        box-shadow: 0 10px 10px rgba(64, 64, 64, 0.5);
-    }
-
-    nav ul {
-        text-align: center;
-        padding: 5px 0;
-    }
-
-    nav ul li {
-        display: inline;
-        list-style: none;
-        color: #94bfd5;
-        font-size: 20px;
-    }
-
-    nav ul li:after {
-        content: '//'
-    }
-
-    nav ul li:last-child:after {
-        content: ''
-    }
-
-    nav a {
-        color: #fff;
-        margin: 0 1em;
-        text-decoration: none;
-    }
-
-    nav a.current, nav a:hover {
-        text-decoration: underline;
-    }
-
-    article {
-        background: #FFFFD1;
-        margin: 20px 2% 20px 15%;
-        padding: 2%;
-        width: 80%;
-        min-height: 200px;
-        border: 2px solid white;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-        text-shadow: 0 1px 1px #fff;
-    }
-
-    article.quote {
-        min-height: 100px;
-    }
-
-    article aside.droplet {
-        width: 60px;
-        height: 60px;
-        float: left;
-        text-align: center;
-        background: white;
-        margin: -10px 10px 0 -160px;
-        padding: 30px;
-        -moz-border-radius: 60px 2px 60px 60px;
-        border-radius: 60px 2px 60px 60px;
-        -moz-opacity: 0.7;
-        opacity: 0.7;
-    }
-
-    article h1, article h2, article h3 {
-        padding: 0 0 0.5em;
-    }
-
-    article ul, article p {
-        margin-bottom: 20px;
-        font-size: 18px;
-    }
-
-    ul.tags, ul.bottomlinks {
-        text-align: right;
-        margin: 0;
-        padding: 0.2em 10px;
-    }
-
-    ul.tags {
-        float: right;
-        width: 50%;
-        font-size: 14px;
-    }
-
-    ul.bottomlinks {
-        clear: both;
-        display: block;
-        width: 100%;
-        margin: 10px;
-        font-size: 20px;
-    }
-
-    ul.tags li {
-        display: inline;
-        background: url(http://static.tumblr.com/rfjqlp2/XrPlm2s8l/tag_icon.png) no-repeat;
-        padding-left: 18px;
-        line-height: 28px;
-        text-transform: uppercase;
-    }
-
-    ul.bottomlinks li.pen {
-        display: inline;
-        background: url(images/pen_icon.png) no-repeat;
-        padding-left: 30px;
-        line-height: 28px;
-    }
-
-    ul.tags li a, ul.bottomlinks li a {
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        padding: 3px;
-
-        font-weight: normal;
-        text-shadow: none;
-        text-decoration: none;
-        color: black;
-    }
-
-    ul.tags li a:hover, ul.bottomlinks li a:hover {
-        background: white;
-    }
-
-    article.quote blockquote {
-        font-family: Lobster, "trebuchet MS", tahoma, helvetica, sans-serif;
-        font-size: 24px;
-        padding: 20px 80px 20px 80px;
-        margin: -10px 0 20px 0;
-    }
-
-    blockquote .title {
-        display: none;
-    }
-
-    article.quote .openingcurl {
-        display: block;
-        float: left;
-        height: 45px;
-        margin: -55px 0 0 -90px;
-        font-size: 700%;
-        color: #BE490E;
-    }
-
-    article.quote .closingcurl {
-        display: block;
-        float: right;
-        height: 25px;
-        margin: -35px -85px 0 0;
-        font-size: 700%;
-        color: #BE490E;
-    }
-
-    article.quote cite {
-        margin-left: 80px;
-        font-size: 20px;
-    }
-
-    article a, footer a, .warning {
-        color: #BE490E;
-        font-weight: bold;
-    }
-
-    .warning {
-        font-family: Courier, monospace;
-        font-size: 64px;
-    }
-
-    div.clear {
-        clear: both;
-        height: 0 !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        border: 0 !important;
-    }
-
-    footer {
-        clear: both;
-        overflow: auto;
-        background: #29292a;
-        font-size: 12px;
-        color: white;
-        border-top: 1px solid #fff;
-        -webkit-box-shadow: 0 0 10px rgba(64, 64, 64, 0.5)
-    }
-
-    footer>div {
-        height: 100px;
-        padding: 10px;
-    }
-
-    #leftfooter {
-        width: 40%;
-        float: left;
-        text-align: left;
-    }
-
-    #midfooter {
-        float: left;
-        font-size: 16px;
-        height: 50px;
-        padding: 60px 0 10px 100px;
-        background: url(http://farm4.static.flickr.com/3358/5764545855_97b89127a9_t.jpg) left 60% no-repeat;
-    }
-
-    #rightfooter {
-        width: 20%;
-        float: right;
-        text-align: right;
-    }
-
-        /*JavaScript Highlighting style for hijs.js */
-    code, .example {
-        font-family: 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Courier, monospace !important;
-        font-size: 16px;
-        border: 1px red dotted;
-        background: #fff;
-        padding: 1em;
-        overflow-x: auto;
-        overflow-y: hidden;
-    }
-
-    code .comment {
-        color: #3CB371;
-    }
-
-    code .keyword {
-        color: #1E90FF;
-        font-weight: bold;
-    }
-
-    code .class {
-        font-style: italic;
-    }
-
-    code .string {
-        color: #CD5C5C;
-        font-weight: bold;
-    }
-
-    code .number {
-        color: #E9967A;
-        font-weight: bold;
-    }
-
+    <!-- Here, we'll force Tumblr params into the stylesheet -->
+    <style>
+        {CustomCSS}
     </style>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
 
-<header>
-    <hgroup>
-        <h1><img id="logo" src="{image:Logo}" alt="Eidolon Labs"/></h1>
-        <h2>To Infinity... and Beyond!</h2>
-    </hgroup>
-</header>
+<div id="container">
+    <header>
+        <hgroup>
+            <h1><img id="logo" src="http://i52.tinypic.com/11t50dk.png" alt="Eidolon Labs"/></h1>
 
-<nav>
-    <ul>
-        <li><a href='/'>Blog</a></li>
-        <li><a href='/archive'>Archives</a></li>
-        <li><a href='/whoswho'>Qui sommes nous ?</a></li>
-        <li><a href='/contact' class="current">Nous contacter</a></li>
-    </ul>
-</nav>
+            <h2>To Infinity... and Beyond!</h2>
+        </hgroup>
+    </header>
 
+    <nav id="navigation">
+        <ul>
+            <li><a href='/'>Blog</a></li>
+            <li><a href='/archive'>Archives</a></li>
+            <li><a href='/whoswho'>Qui sommes nous ?</a></li>
+            <li><a href='/contact' class="current">Nous contacter</a></li>
+        </ul>
+    </nav>
+
+<div id="main">
 <article class="article" id="contact">
     
-    <h2>Nous Contacter</h2>
-
     <script type="text/javascript">
         (function() {
             var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");
@@ -383,6 +61,8 @@
         m7x3s5.display();
     </script>
 </article>
+</div>
+</div>
 
 <footer>
     <div id="leftfooter"><br/><br/><br/>
@@ -390,15 +70,15 @@
         sont distribués librement sous licence MIT
     </div>
 
-    <div id="midfooter"><span id="copyright">&copy;&nbsp;2011</span><br/><img src="{image:Logo}" width="136px"
-                                                                              height="20px" alt="Eidolon Labs"/></div>
+    <div id="midfooter"><span id="copyright">&copy;&nbsp;2011</span><br/>
+        <img src="{image:Logo}" width="136px" height="20px" alt="Eidolon Labs"/>
+    </div>
 
     <div id="rightfooter"><br/><br/><br/>Powered by <a href="http://www.tumblr.com">Tumblr</a><br/>Syntax Highlighting
         with <a href="http://github.com/cloudhead/hijs">hijs</a>
     </div>
     <div class="clear"></div>
 </footer>
-
 
 </body>
 </html>
